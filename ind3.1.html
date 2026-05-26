@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тарифные планы</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f4f5f7;
+            padding: 40px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .pricing-table {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            padding: 20px;
+        }
+        .plan-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            width: 210px;
+            text-align: center;
+            padding: 0 0 25px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 1s ease, box-shadow 1s ease;
+            position: relative;
+        }
+        .plan-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+
+        .plan-header {
+            padding: 15px;
+            font-weight: bold;
+            font-size: 13px;
+            border-bottom: 3px solid;
+            letter-spacing: 0.5px;
+        }
+        .card-enterprise .plan-header { border-color: #dc3545; color: #333; }
+        .card-professional .plan-header { border-color: #fd7e14; color: #333; }
+        .card-standard .plan-header { border-color: #007bff; color: #333; }
+        .card-basic .plan-header { border-color: #28a745; color: #333; }
+
+        .plan-price {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 20px 0 2px;
+            color: #222;
+        }
+        .plan-sub { font-size: 12px; color: #888; margin-bottom: 25px; }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+            font-size: 12px;
+            line-height: 2.2;
+            color: #555;
+        }
+        
+        .btn-buy {
+            width: 75%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+        }
+        .btn-buy:hover { opacity: 0.9; }
+        .card-enterprise .btn-buy { background-color: #dc3545; }
+        .card-professional .btn-buy { background-color: #fd7e14; }
+        .card-standard .btn-buy { background-color: #007bff; }
+        .card-basic .btn-buy { background-color: #28a745; }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="plan-card card-enterprise">
+            <div class="plan-header">ENTERPRISE</div>
+            <div class="plan-price">$69</div>
+            <div class="plan-sub">per month</div>
+            <ul class="plan-features">
+                <li>10GB disk space</li>
+                <li>100GB monthly bandwidth</li>
+                <li>20 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="btn-buy">BUY</button>
+        </div>
+
+        <div class="plan-card card-professional">
+            <div class="plan-header">PROFESSIONAL</div>
+            <div class="plan-price">$29</div>
+            <div class="plan-sub">per month</div>
+            <ul class="plan-features">
+                <li>5GB disk space</li>
+                <li>60GB monthly bandwidth</li>
+                <li>10 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="btn-buy">BUY</button>
+        </div>
+
+        <div class="plan-card card-standard">
+            <div class="plan-header">STANDARD</div>
+            <div class="plan-price">$19</div>
+            <div class="plan-sub">per month</div>
+            <ul class="plan-features">
+                <li>3GB disk space</li>
+                <li>30GB monthly bandwidth</li>
+                <li>5 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="btn-buy">BUY</button>
+        </div>
+
+        <div class="plan-card card-basic">
+            <div class="plan-header">BASIC</div>
+            <div class="plan-price">$9</div>
+            <div class="plan-sub">per month</div>
+            <ul class="plan-features">
+                <li>1GB disk space</li>
+                <li>10GB monthly bandwidth</li>
+                <li>2 email accounts</li>
+                <li>Unlimited subdomains</li>
+            </ul>
+            <button class="btn-buy">BUY</button>
+        </div>
+    </div>
+
+</body>
+</html>
